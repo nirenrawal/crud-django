@@ -27,10 +27,9 @@ jobs:
         python manage.py test
 
   deploy:
-      needs: [test]
-      runs-on: ubuntu-latest
-
-      steps:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout source code
         uses: actions/checkout@v2
 
